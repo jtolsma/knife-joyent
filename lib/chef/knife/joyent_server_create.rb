@@ -269,6 +269,8 @@ class Chef
         Chef::Log.debug("Bootstrap ssh_gateway= #{config[:ssh_gateway]}")
         bootstrap.config[:ssh_gateway] = config[:ssh_gateway]
 
+        Chef::Log.debug("Bootstrap file = #{config[:template_file]}")
+        bootstrap.config[:template_file] = config[:template_file]
 
         Chef::Log.debug("Bootstrap json_attributes = #{config[:json_attributes]}")
         bootstrap.config[:first_boot_attributes] = config[:json_attributes]

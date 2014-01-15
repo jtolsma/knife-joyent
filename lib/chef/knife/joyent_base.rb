@@ -59,7 +59,7 @@ class Chef
           Excon.defaults[:ssl_verify_peer] = false
         end
 
-        @connection ||= begin
+        begin
            Fog::Compute.new(
             :provider => 'Joyent',
             :joyent_username => locate_config_value(:joyent_username),
